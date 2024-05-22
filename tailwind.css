@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    /* Custom CSS */
+
+    :root {
+        --airbnb-color-main: #FF385C;
+
+        --vh: 7.97px;
+    }
+
+    * {
+        /* font-family: "Circular" */
+    }
+
+    .text-divider {
+        --text-divider-gap: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top:16px;
+        margin-bottom:16px;
+    }
+
+    .text-divider::before,
+    .text-divider::after {
+        content: '';
+        height: 1px;
+        background-color: silver;
+        flex-grow: 1;
+    }
+
+    .text-divider::before {
+        margin-right: var(--text-divider-gap);
+    }
+
+    .text-divider::after {
+        margin-left: var(--text-divider-gap);
+    }
+
+}
